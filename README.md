@@ -57,7 +57,7 @@ Dockerfile을 작성해서 스프링 부트 애플리케이션을 Docker 이미�
 <br>
 
 ### 2) Docker 이미지 빌드
-&nbsp; **2-1)** **docker build** 명령어로 mystringboot라는 이름으로 Docker 이미지를 빌드한다. (string boot (x) spring boot (o) 오타 😋) 
+&nbsp; **2-1)** **docker build** 명령어로 mystringboot라는 이름으로 Docker 이미지를 빌드한다. <br> &nbsp;&nbsp;&nbsp;&nbsp; (string boot (x) spring boot (o) 오타 😋) 
 <br>
 
     docker build -t mystringboot . 
