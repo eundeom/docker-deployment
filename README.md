@@ -24,14 +24,14 @@
 ### 1) Dockerfile 작성 및 설정
 Dockerfile을 작성해서 스프링 부트 애플리케이션을 Docker 이미지로 만들기 위한 설정을 정의해준다. <br>
 
-1-1) 작업 디렉토리 05.myImage 생성 후 **Dockerfile** 생성 <br>
+&nbsp; **1-1)** 작업 디렉토리 05.myImage 생성 후 **Dockerfile** 생성 <br>
 
     /05.myImage
     ├── Dockerfile
     └── step01_basic-0.0.1-SNAPSHOT.jar
 
 
-1-2) 로컬에서 빌드한 **`.jar` 파일**을 컨테이너로 복사하기 <br>
+&nbsp; **1-2)** 로컬에서 빌드한 **`.jar` 파일**을 컨테이너로 복사하기 <br>
 
     $cp step01_basic-0.0.1-SNAPSHOT.jar 05.myImage/step01_basic-0.0.1-SNAPSHOT. 
 
@@ -57,28 +57,27 @@ Dockerfile을 작성해서 스프링 부트 애플리케이션을 Docker 이미�
 <br>
 
 ### 2) Docker 이미지 빌드
-<br>
-    2-1) **docker build** 명령어로 mystringboot라는 이름으로 Docker 이미지를 빌드한다. (string boot (x) spring boot (o) 오타 😋) 
+&nbsp; **2-1)** **docker build** 명령어로 mystringboot라는 이름으로 Docker 이미지를 빌드한다. (string boot (x) spring boot (o) 오타 😋) 
 <br>
 
     docker build -t mystringboot . 
 
 ### 3) Docker 이미지 태그 지정
-3-1) Docker Hub에 업로드할 때 이미지를 태그(latest)로 지정한다.  
+&nbsp; **3-1)** Docker Hub에 업로드할 때 이미지를 태그(latest)로 지정한다.  
 
     docker tag mystringboot eundeom/mystringboot:latest 
 
 ### 4) Docker Hub에 이미지 업로드
-4-1) Docker Hub에 로그인한 후, docker push 명령어로 이미지를 업로드한다.
+&nbsp; **4-1)** Docker Hub에 로그인한 후, docker push 명령어로 이미지를 업로드한다.
     
      docker push eundeom/mystringboot:latest 
     
-4-2) **Docker Hub Repository**에서 이미지 업로드된 거 확인 가능
+&nbsp; **4-2) Docker Hub Repository**에서 이미지 업로드된 거 확인 가능
 <br>
   <img src="https://github.com/user-attachments/assets/18bebad7-c3f6-4fb4-898a-677fc8bfc435" width="700">
 
 ### 5) Docker 컨테이너 실행
-5-1) **docker run** 명령어로 Docker 컨테이너를 실행하여 Spring Boot 애플리케이션을 실행한다. 
+&nbsp; **5-1)** **docker run** 명령어로 Docker 컨테이너를 실행하여 Spring Boot 애플리케이션을 실행한다. 
 <br>
 
 `-p` 옵션으로 포트를 매핑해서 호스트에서 **8080 포트**를 통해 애플리케이션에 접근할 수 있다!  <br>
